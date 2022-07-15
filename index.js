@@ -5,8 +5,8 @@ var level=0;
 var game = true;
 
 
-$(document).keypress(function(){
 
+$(".startbtn").click(function(){
   if(game){
     game=false;
     $("body").removeClass("wrong");
@@ -14,7 +14,6 @@ $(document).keypress(function(){
     level=0;
     startgame();
   }
-
 });
 
 $(".btn").click(function(){
@@ -29,6 +28,7 @@ $(".btn").click(function(){
 
 
 function startgame(){
+  $(".startbtn").addClass("Startbtn_visibility");
   answer=[];
 
   setTimeout(function(){
@@ -59,15 +59,23 @@ function buttonAct(colour){
 }
 
 function checkAnswer(){
-  for(var i = 0 ; i<answer.length ; i++){
-    if(answer[i]===question[i]){
-      if(answer.length===question.length){
+  var i=0;
+  if(answer.length===1){
+    i=0;
+  }else{
+    i=answer.length -1;
+  }
+  for(var k = i ; k<answer.length ; k++){
+    if(answer[k]===question[k]){
+      if(answer.length===question.length ){ // trace full logic of checkAnswer then only u will get it.
         level++;
         startgame();
       }
 
     }else{
       game=true;
+      $(".startbtn").text("Restart");
+      $(".startbtn").removeClass("Startbtn_visibility");
       wrong();
 
     }
@@ -77,7 +85,7 @@ function checkAnswer(){
 }
 
 function wrong(){
-  $("h1").text(" GAME OVER......press A key to restart!!!");
+  $("h1").text(" GAME OVER. press to restart !");
   $("body").addClass("wrong");
   var audio = new Audio("sounds/wrong.mp3");
   audio.play();
