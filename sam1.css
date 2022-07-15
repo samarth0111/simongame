@@ -37,17 +37,31 @@ h1{
 }
 
 @media (max-width : 904px){
-  .btn{
-    display: block;
-    width : 55%;
-    height:150px;
-    margin: 5% auto 5% auto;
 
+  .red{
+    position: relative;
+    right : 20%;
+  }
+  .green{
+    position: relative;
+    left : 20%;
+  }
+  .blue{
+    position: relative;
+    right : 20%;
+  }
+  .yellow{
+    position: relative;
+    left : 20%;
   }
   .sam{
-
     margin-top: 150px;
-
+  }
+  .secondrow{
+    margin-top: 20px;
+  }
+  .firstrow{
+    margin-top: 50px;
   }
 }
 
@@ -61,12 +75,32 @@ h1{
 
 }
 
-.sam{
+.sam,a{
 
   margin-top: 100px;
-  color: white;
+  color: grey;
   text-shadow: 10px;
   text-align: center;
 font-size: 25px;
 font-style: italic;
+
 }
+a{
+  color: white;
+  font-size: 35px;
+}
+
+.startbtn{
+  border: 5px solid black;
+  border-radius: 20px;
+  background-color: #E6B325;
+  width : 150px;
+  font-size: 25px;
+  font-family:  cursive;
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+.Startbtn_visibility{
+  visibility: hidden;
+}
+
