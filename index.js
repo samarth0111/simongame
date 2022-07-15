@@ -85,7 +85,7 @@ function checkAnswer(){
 }
 
 function wrong(){
-  $("h1").text(" GAME OVER ");
+  $("h1").text(" GAME OVER  ");
   $("body").addClass("wrong");
   var audio = new Audio("sounds/wrong.mp3");
   audio.play();
