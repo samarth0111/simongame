@@ -38,6 +38,18 @@ h1{
 }
 
 @media (max-width : 904px){
+  
+  h2{
+     margin-top: 150px;
+     text-align: center;
+   }
+
+  li{
+    font-size: 15px !important;
+  }
+  ul{
+    text-align: center;
+  }
 
   .red{
     position: relative;
@@ -104,4 +116,21 @@ a{
 .Startbtn_visibility{
   visibility: hidden;
 }
+li{
+  text-align: left;
+  color : #CFD2CF;
+  line-height: 1.5;
+  font-size: 20px;
+  font-family:sans-serif;
+  text-shadow: 1px 1px 2px red;
+
+}
+h2{
+  text-align: left;
+  color : #CFD2CF;
+  font-family:sans-serif;
+  text-shadow: 2px 2px 3px red;
+
+}
+
 
